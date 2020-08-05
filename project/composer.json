@@ -1,0 +1,38 @@
+{
+    "name": "perfumerlabs/email",
+    "type": "library",
+    "description": "Email sending docker container",
+    "homepage": "https://perfumerlabs.com",
+    "authors": [
+        {
+            "name": "Ilyas Makashev",
+            "email": "mehmatovec@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "perfumer/framework": "0.8.5",
+        "pwfisher/command-line-php": "dev-master",
+        "symfony/console": "5.*",
+        "symfony/http-foundation": "5.*",
+        "nikic/fast-route": "1.*",
+        "swiftmailer/swiftmailer": "^6.0"
+    },
+    "require-dev": {
+        "filp/whoops": "2.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Project\\": "src/",
+            "Email\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist"
+    }
+}
