@@ -1,6 +1,6 @@
 FROM ubuntu:xenial
 
-MAINTAINER Ilyas Makashev <mehmatovec@gmail.com>
+LABEL authors="Ilyas Makashev mehmatovec@gmail.com"
 
 RUN set -x \
     && apt-get update \
@@ -49,7 +49,6 @@ RUN set -x\
     && chmod +x /usr/local/bin/entrypoint.sh \
     && chmod +x /usr/local/bin/init.sh
 
-ENV EMAIL_HOST email
 ENV EMAIL_FROM ''
 ENV SMTP_HOST ''
 ENV SMTP_PORT 25
@@ -59,6 +58,7 @@ ENV SMTP_ENCRYPTION ''
 ENV SMTP_TIMEOUT 30
 ENV PHP_PM_MAX_CHILDREN 10
 ENV PHP_PM_MAX_REQUESTS 500
+ENV DEV false
 
 EXPOSE 80
 

@@ -10,20 +10,18 @@ Installation
 ```bash
 docker run \
 -p 80:80/tcp \
--e EMAIL_HOST=example.com \
 -e EMAIL_FROM=noreply@example.com \
 -e SMTP_HOST=smtp \
 -e SMTP_PORT=587 \
 -e SMTP_USERNAME=username \
 -e SMTP_PASSWORD=password \
 -e SMTP_ENCRYPTION=tls \
--d perfumerlabs/email:v1.0.0
+-d perfumerlabs/email:v1.1.0
 ```
 
 Environment variables
 =====================
 
-- EMAIL_HOST - server domain (without http://). Required.
 - EMAIL_FROM - email which is used to set as "FROM". Required.
 - SMTP_HOST - SMTP server host. Required.
 - SMTP_PORT - SMTP port. Default is 25.
@@ -40,13 +38,6 @@ Volumes
 This image has no volumes.
 
 If you want to make any additional configuration of container, mount your bash script to /opt/setup.sh. This script will be executed on container setup.
-
-Software
-========
-
-1. Ubuntu 16.04 Xenial
-1. Nginx 1.16
-1. PHP 7.4
 
 API Reference
 =============
@@ -77,3 +68,10 @@ Response example:
     "status": true
 }
 ```
+
+Software
+========
+
+1. Ubuntu 16.04 Xenial
+1. Nginx 1.16
+1. PHP 7.4
